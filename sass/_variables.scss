@@ -1,0 +1,49 @@
+//Font-size
+$tiny: 0.875rem;
+$small: 1.125rem;
+$medium: 1.25rem;
+$medium-2: 1.375rem;
+$medium-3: 1.5rem;
+$big: 2.0685rem;
+$large: 2.8125rem;
+$x-large: 3.75rem;
+
+// color
+$baground: #f7fbff;
+$dark-blue: #0b1a47;
+$white: rgba(247, 251, 255, 1);
+$yellow-orange: #ec8e00;
+$grey: #676a8a;
+
+$light-green: #bdf2e3;
+$blue-gredient: linear-gradient(180deg, #89a7ff 0%, #476fe4 100%);
+$blue: rgba(14, 99, 244, 1);
+$green: rgba(14, 182, 84, 1);
+$circle-linear: linear-gradient(149.21deg, #ffffff 12.75%, #d0dcff 86.99%);
+$inter: "Inter", sans-serif;
+
+// button-style
+.big-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  color: $white;
+  background-color: $yellow-orange;
+  font-size: $small;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 16px 24px;
+  &:hover {
+    background-color: $green;
+    cursor: pointer;
+  }
+  i {
+    color: $white;
+    font-size: 24px;
+    margin: auto 0;
+    margin-left: 16px;
+    padding: auto 0;
+  }
+  img{
+    margin: 0;
+  }
+}

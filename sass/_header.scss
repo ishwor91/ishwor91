@@ -1,0 +1,529 @@
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.top-nav {
+  height: 44px;
+  background-color: $white;
+}
+// header start
+.header {
+  padding: 31px 0;
+
+  // logo start
+  &-logo {
+    position: relative;
+
+    .line {
+      position: absolute;
+      background-color: $yellow-orange;
+      display: block;
+
+      &-1 {
+        height: 23.29px;
+        top: 0;
+
+        width: 6.46px;
+        left: 15.4px;
+      }
+
+      &-2 {
+        height: 6.46px;
+        width: 21.94px;
+        top: 16.83px;
+        left: 0;
+      }
+
+      &-3 {
+        width: 6.46px;
+        height: 15.77px;
+        left: 24.57px;
+        top: 7.52px;
+      }
+
+      &-4 {
+        height: 6.46px;
+        width: 15.09px;
+        left: 24.53px;
+        top: 16.84px;
+      }
+
+      &-5 {
+        width: 15.67px;
+        height: 6.46px;
+        top: 25.92px;
+        left: 6.27px;
+      }
+
+      &-6 {
+        width: 6.46px;
+        height: 21.59px;
+        top: 25.92px;
+        left: 15.48px;
+      }
+
+      &-7 {
+        width: 21.45px;
+        height: 6.46px;
+        top: 25.92px;
+        left: 24.53px;
+      }
+
+      &-8 {
+        width: 6.46px;
+        height: 27.08px;
+        top: 25.92px;
+        left: 24.53px;
+        font-family: "Inter", sans-serif;
+      }
+    }
+    // logo end
+    &-name {
+      position: relative;
+      left: 62px;
+      font-size: $big;
+      font-family: $inter;
+      letter-spacing: 0.035rem;
+      &::after {
+        content: "";
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: $yellow-orange;
+      }
+    }
+  }
+
+  &-menu {
+    > span {
+      display: block;
+      height: 3.5px;
+      background-color: black;
+      width: 26px;
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  &-links {
+    gap: 40px;
+    font-size: $small;
+    a {
+      color: $grey;
+      text-decoration: none;
+      &.active {
+        color: $dark-blue;
+        font-weight: 400;
+      }
+      &:hover {
+        background-color: $yellow-orange;
+        padding: 4px;
+        border-radius: 4px;
+      }
+    }
+  }
+  &-social {
+    color: $grey;
+    font-size: 0.875rem;
+    &-left {
+      gap: 20.6px;
+      i > span {
+        margin-left: 10.74px;
+      }
+    }
+    &-right {
+      gap: 24.76px;
+    }
+  }
+}
+// header end
+
+// Circle design
+.circle {
+  position: absolute;
+  display: block;
+  height: 90px;
+  width: 90px;
+  background: $circle-linear;
+  border-radius: 50%;
+  top: -40px;
+  left: -40px;
+}
+
+// samll button
+.sm-btn {
+  font-size: $tiny;
+  background-color: $light-green;
+  padding: 10px 24px;
+  width: 161px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: $green;
+}
+
+// hero sevtion start
+
+.hero {
+  display: grid;
+  column-gap: 84px;
+  grid-template-columns: 1fr 1fr;
+  height: 691px-191px;
+  position: relative;
+  &-text {
+    margin: 131px auto;
+
+    &-x-large {
+      font-size: $x-large;
+      color: $dark-blue;
+      font-weight: 600;
+      margin-top: 1rem;
+      i {
+        font-size: 44px;
+      }
+    }
+    &-medium-2 {
+      margin-top: 1rem;
+      font-size: $medium-2;
+      line-height: 42px;
+      color: $grey;
+      font-weight: 400;
+    }
+  }
+  &-image {
+    max-width: 497px;
+    position: relative;
+    margin: 48px auto;
+
+    &-3 {
+      width: 87px;
+      height: 117px;
+      position: absolute;
+    }
+  }
+}
+// right circle
+.circle-1 {
+  position: absolute;
+  top: -107px;
+  right: 99px;
+  left: 1137px;
+}
+
+// cards section
+.cards {
+  &-circle {
+    top: -107px;
+    left: -113px;
+  }
+  position: relative;
+  top: 191px;
+  height: 355px;
+  background: linear-gradient(180deg, #89a7ff 0%, #476fe4 100%);
+  border-radius: 16px;
+  color: $white;
+  font-size: $medium;
+
+  &-card {
+    padding: 40px;
+    box-shadow: inset -1px 0px 0px rgba(255, 255, 255, 0.1);
+  }
+  &-small {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    &-text {
+      .first {
+        padding-bottom: 8px;
+        border-bottom: 1px solid $white;
+      }
+      .last {
+        padding-top: 8px;
+      }
+    }
+  }
+  &-medium {
+    font-size: $medium;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  &-btn {
+    margin-top: 24px;
+    padding: 16px 24px;
+    font-size: $small;
+    font-weight: 600;
+    background: none;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: 4px;
+    line-height: 21.78px;
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      color: $white;
+      margin-top: 44px;
+    }
+  }
+}
+
+// about us section start
+.about {
+  background-color: $baground;
+}
+.aboutus {
+  padding-top: 172.5px;
+  align-items: center;
+  height: 191px + 858px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 126.63px;
+  align-items: center;
+  &-image {
+    position: relative;
+    max-width: 466.86px;
+    &-3 {
+      width: 110.23px;
+      width: 145.47px;
+      position: absolute;
+      top: 185px;
+      left: -25px;
+    }
+    &-2 {
+      width: 214.14px;
+      height: 113.85px;
+      position: absolute;
+      right: 54px;
+      bottom: 9.14px;
+    }
+  }
+  &-text {
+    &-large {
+      width: 554px;
+      font-size: $large;
+      font-weight: 600;
+      line-height: 55px;
+      color: $dark-blue;
+      margin-top: 16px;
+    }
+    &-medium {
+      font-size: $medium;
+      font-weight: 400;
+      line-height: 40px;
+      margin-top: 16px;
+      color: $grey;
+    }
+    &-medium-3 {
+      font-size: $medium-3;
+      font-weight: 600;
+      line-height: 40px;
+      margin-top: 24px;
+    }
+    .care-card {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 8px 75px;
+      i {
+        color: $green;
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+//about us section end
+
+// our services start
+.our-services {
+  height: 1322px;
+  .sm-btn {
+    display: inherit;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 96px;
+  }
+  &-large {
+    font-size: $large;
+    color: $dark-blue;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 24px;
+  }
+  &-medium-3 {
+    font-size: $medium-3;
+    text-align: center;
+    width: 651px;
+    margin: 0 auto;
+    margin-top: 16px;
+    color: $grey;
+  }
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+.card {
+  width: 360px;
+  height: 350px;
+  border-radius: 20px;
+  margin-top: 52px;
+  background-color: $baground;
+  .fa-solid {
+    border-radius: 20px 20px 0 0;
+    font-size: 2.625rem;
+    padding: 45px 159px;
+
+    color: $white;
+    background: linear-gradient(180deg, #89a7ff 0%, #476fe4 100%);
+  }
+  &-medium-3 {
+    font-size: $medium-3;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 24px;
+  }
+  .big-btn {
+    width: 100%;
+    background: none;
+    color: $yellow-orange;
+    text-align: center;
+    margin-top: 24px;
+    padding: 0;
+    i {
+      color: $yellow-orange;
+    }
+  }
+  &-small {
+    font-size: $small;
+    color: $grey;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 11px;
+    margin-bottom: 24px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  &-btn {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+&-btn{
+  margin-top: 1.4rem;
+}
+}
+
+
+
+
+
+// .appointments sections 
+.appointments{
+  
+  height: 774px;
+  background-color: $baground;
+  &-text {
+    padding-top: 96px;
+    &-large {
+      font-size: $large;
+      font-weight: 700;
+      color: rgba(11, 26, 71, 1);
+      line-height: 3.055em;
+    }
+    &-medium-3 {
+      font-size: $medium-3;
+      color: $grey;
+      line-height: 2.3em;
+      max-width: 545px;
+    }
+  }
+  &-links{
+    position: relative;
+    z-index: 1;
+    &::after{
+      content: "";
+      background:url(../img/dots.png);
+      height: 153px;
+      width: 200px;
+      position: absolute;
+      top: 277px;
+      right: -95px;
+      z-index: -1;
+    }
+   margin-top: 40px;
+    &-image{
+      display: inline-block;
+      height: 360px;
+      width: 263px;
+      background: $blue-gredient;
+      box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
+      border-radius: 10px;
+      text-align: center;
+      img{
+        height: 128px;
+        width: 128px;
+        margin-top: 56px;
+      }
+      &>p{
+        font-size: 1.5625rem;
+        color: $white;
+        padding: 40px 47px 56px 54px;
+      }
+
+    }
+   
+
+  }
+  &-links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 25px;
+       .bg-change{
+        background: $white;
+        &> P{
+          position: relative;
+          color: black;
+          font-weight: 600;
+          z-index: 10;
+       }
+    }
+  }
+}
+// apppointment end here 
+// Booking start here 
+.booking{
+  &-left{
+    &-large{
+      font-size: $large;
+      font-weight: 600;
+      line-height: 3.435rem;
+      color: $dark-blue;
+      margin-top: 15px;
+
+    
+    }
+    &-medium-3{
+      font-size: $medium-3;
+      font-weight: 400;
+      line-height: 25px;
+      color: $grey;
+      margin-top: 16px;
+      
+
+    }
+  }
+}
