@@ -23,6 +23,10 @@ $circle-linear: linear-gradient(149.21deg, #ffffff 12.75%, #d0dcff 86.99%);
 $inter: "Inter", sans-serif;
 
 // button-style
+.btn{
+  text-align: center;
+ 
+}
 .big-btn {
   display: inline-block;
   margin-top: 3rem;
@@ -31,19 +35,22 @@ $inter: "Inter", sans-serif;
   font-size: $small;
   font-weight: 600;
   border-radius: 10px;
-  padding: 16px 24px;
+  padding: 24px 40px;
+  line-height: 21.78px;
   &:hover {
     background-color: $green;
     cursor: pointer;
   }
   i {
     color: $white;
-    font-size: 24px;
     margin: auto 0;
     margin-left: 16px;
     padding: auto 0;
   }
-  img{
-    margin: 0;
+
+    img{
+      margin-left: 16px;
+    }
   }
-}
+
+

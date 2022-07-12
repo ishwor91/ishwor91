@@ -71,6 +71,17 @@
 {
     display: none;
 }
+.header-flex{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+.flex{
+    flex-wrap: wrap;
+    justify-content: center;
+}
 }
 
 

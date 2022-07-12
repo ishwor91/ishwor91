@@ -1,21 +1,9 @@
-.flex {
-  display: flex;
-
-  &-jc-sb {
-    justify-content: space-between;
-  }
-  &jc-c {
-    justify-content: center;
-  }
-
-  &-ai-c {
-    align-items: center;
-  }
-}
-
 .top-nav {
   height: 44px;
   background-color: $white;
+  i {
+    margin-right: 10px;
+  }
 }
 // header start
 .header {
@@ -121,7 +109,7 @@
     font-size: $small;
     a {
       color: $grey;
-      text-decoration: none;
+      margin-top: 0;
       &.active {
         color: $dark-blue;
         font-weight: 400;
@@ -130,6 +118,13 @@
         background-color: $yellow-orange;
         padding: 4px;
         border-radius: 4px;
+      }
+    }
+    .big-btn {
+      color: $white;
+      padding: 16px 24px;
+      &:hover {
+        color: $green;
       }
     }
   }
@@ -178,7 +173,7 @@
   display: grid;
   column-gap: 84px;
   grid-template-columns: 1fr 1fr;
-  height: 691px-191px;
+  // height: 869px;
   position: relative;
   &-text {
     margin: 131px auto;
@@ -222,42 +217,29 @@
 
 // cards section
 .cards {
-  &-circle {
-    top: -107px;
-    left: -113px;
-  }
   position: relative;
-  top: 191px;
-  height: 355px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // height: 355px;
   background: linear-gradient(180deg, #89a7ff 0%, #476fe4 100%);
   border-radius: 16px;
   color: $white;
   font-size: $medium;
+  &-circle {
+    top: -107px;
+    left: -113px;
+  }
 
   &-card {
+    position: relative;
     padding: 40px;
     box-shadow: inset -1px 0px 0px rgba(255, 255, 255, 0.1);
-  }
-  &-small {
-    margin-top: 12px;
-    font-size: 18px;
-    font-weight: 400;
-    &-text {
-      .first {
-        padding-bottom: 8px;
-        border-bottom: 1px solid $white;
-      }
-      .last {
-        padding-top: 8px;
-      }
+    i {
+      margin: 0;
     }
   }
-  &-medium {
-    font-size: $medium;
-    margin-top: 20px;
-    font-weight: 600;
-  }
   &-btn {
+    display: inline-block;
     margin-top: 24px;
     padding: 16px 24px;
     font-size: $small;
@@ -267,13 +249,31 @@
     color: $white;
     border-radius: 4px;
     line-height: 21.78px;
-    &:hover {
-      cursor: pointer;
+  }
+
+  &-small {
+    margin-top: 12px;
+    font-size: $small;
+    font-weight: 400;
+    &-text1 {
+      border-bottom: 1 px solid white;
+      font-size: $small;
+      font-weight: 400;
+      line-height: 2.125rem;
+      margin-bottom: 8px;
+      margin-top: 24px;
     }
-    i {
-      color: $white;
-      margin-top: 44px;
+    &-text {
+      margin-top: 8px;
+      line-height: 2.125rem;
+      font-size: $small;
     }
+  }
+  &-medium {
+    font-size: $medium;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
   }
 }
 
@@ -284,7 +284,7 @@
 .aboutus {
   padding-top: 172.5px;
   align-items: center;
-  height: 191px + 858px;
+  // height: 191px + 858px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 126.63px;
@@ -292,6 +292,7 @@
   &-image {
     position: relative;
     max-width: 466.86px;
+    padding-bottom: 86px;
     &-3 {
       width: 110.23px;
       width: 145.47px;
@@ -328,8 +329,10 @@
       font-weight: 600;
       line-height: 40px;
       margin-top: 24px;
+      color: $dark-blue;
     }
     .care-card {
+      color: $grey;
       margin-top: 14px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -347,7 +350,8 @@
 
 // our services start
 .our-services {
-  height: 1322px;
+  // height: 1344px;
+
   .sm-btn {
     display: inherit;
     text-align: center;
@@ -357,7 +361,7 @@
   &-large {
     font-size: $large;
     color: $dark-blue;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     margin-top: 24px;
   }
@@ -367,7 +371,7 @@
     width: 651px;
     margin: 0 auto;
     margin-top: 16px;
-    color: $grey;
+    color: rgba(18, 23, 31, 1);
   }
   &-cards {
     display: grid;
@@ -375,72 +379,71 @@
     grid-gap: 30px;
   }
 
-.card {
-  width: 360px;
-  height: 350px;
-  border-radius: 20px;
-  margin-top: 52px;
-  background-color: $baground;
-  .fa-solid {
-    border-radius: 20px 20px 0 0;
-    font-size: 2.625rem;
-    padding: 45px 159px;
+  .card {
+    width: 360px;
+    height: 350px;
+    border-radius: 20px;
+    margin-top: 52px;
+    background-color: $baground;
+    .fa-solid {
+      border-radius: 20px 20px 0 0;
+      font-size: 2.625rem;
+      padding: 45px 159px;
 
-    color: $white;
-    background: linear-gradient(180deg, #89a7ff 0%, #476fe4 100%);
-  }
-  &-medium-3 {
-    font-size: $medium-3;
-    font-weight: 600;
-    text-align: center;
-    padding-top: 24px;
-  }
-  .big-btn {
-    width: 100%;
-    background: none;
-    color: $yellow-orange;
-    text-align: center;
-    margin-top: 24px;
-    padding: 0;
-    i {
+      color: $white;
+      background: linear-gradient(180deg, #89a7ff 0%, #476fe4 100%);
+    }
+    &-medium-3 {
+      font-size: $medium-3;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 24px;
+    }
+    .big-btn {
+      width: 100%;
+      background: none;
+      font-size: $tiny;
       color: $yellow-orange;
+      text-align: center;
+      margin: 0;
+      padding-top: 24px;
+      i {
+        color: $yellow-orange;
+      }
+    }
+    &-small {
+      font-size: $small;
+      color: $grey;
+      text-align: center;
+      line-height: 28px;
+      padding: 0 30px;
+      padding-top: 11px;
+      margin-bottom: 24px;
+      // width: 300px;
+      margin: 0 auto;
+    }
+    &-btn {
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 104px;
     }
   }
-  &-small {
-    font-size: $small;
-    color: $grey;
-    text-align: center;
-    line-height: 28px;
-    margin-top: 11px;
-    margin-bottom: 24px;
-    width: 300px;
-    margin: 0 auto;
-  }
   &-btn {
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 1.4rem;
   }
 }
-&-btn{
-  margin-top: 1.4rem;
-}
-}
 
-
-
-
-
-// .appointments sections 
-.appointments{
-  
-  height: 774px;
+// .appointments sections
+.appointments {
+  // height: 774px;
   background-color: $baground;
   &-text {
     padding-top: 96px;
+
     &-large {
       font-size: $large;
-      font-weight: 700;
+      font-weight: 600;
       color: rgba(11, 26, 71, 1);
       line-height: 3.055em;
     }
@@ -451,79 +454,481 @@
       max-width: 545px;
     }
   }
-  &-links{
+  &-links {
     position: relative;
     z-index: 1;
-    &::after{
+    &::after {
       content: "";
-      background:url(../img/dots.png);
+      background: url(../img/dots.png);
+      background-repeat: no-repeat;
       height: 153px;
       width: 200px;
       position: absolute;
       top: 277px;
-      right: -95px;
+      right: -107px;
       z-index: -1;
     }
-   margin-top: 40px;
-    &-image{
+    margin-top: 40px;
+    &-image {
       display: inline-block;
       height: 360px;
-      width: 263px;
+      max-width: 263px;
       background: $blue-gredient;
       box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
       border-radius: 10px;
       text-align: center;
-      img{
+      margin-bottom: 147px;
+      img {
         height: 128px;
         width: 128px;
         margin-top: 56px;
       }
-      &>p{
+      & > p {
+        font-weight: 600;
+        line-height: 2.5rem;
         font-size: 1.5625rem;
-        color: $white;
+        color: $dark-blue;
         padding: 40px 47px 56px 54px;
       }
-
     }
-   
-
   }
-  &-links{
+  &-links {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 25px;
-       .bg-change{
-        background: $white;
-        &> P{
-          position: relative;
-          color: black;
-          font-weight: 600;
-          z-index: 10;
-       }
+    grid-gap: 25px;
+    margin-bottom: 147px;
+    .bg-change {
+      background: $white;
+      & > P {
+        position: relative;
+        color: black;
+        font-weight: 600;
+        z-index: 10;
+      }
     }
+  }
+  .white-font > p {
+    color: $white;
   }
 }
-// apppointment end here 
-// Booking start here 
-.booking{
-  &-left{
-    &-large{
+// apppointment end here
+// Booking start here
+.booking {
+  padding-top: 96px;
+
+  &-left {
+    &-large {
       font-size: $large;
       font-weight: 600;
       line-height: 3.435rem;
       color: $dark-blue;
       margin-top: 15px;
-
-    
     }
-    &-medium-3{
+    &-medium-3 {
       font-size: $medium-3;
       font-weight: 400;
       line-height: 25px;
       color: $grey;
       margin-top: 16px;
-      
-
     }
+  }
+  // .appointments form :start here
+  .form {
+    margin-bottom: 98px;
+    // height: 728px;
+    max-width: 555px;
+    background: #ffff;
+    box-shadow: 0px 12px 48px rgba(21, 36, 59, 0.08);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 30px;
+    input,
+    select {
+      border: 1px solid rgba(5, 32, 61, 0.1);
+      height: 52px;
+      padding: 14px 16px;
+      width: 100%;
+      color: $grey;
+      color: rgba(74, 76, 96, 0.5);
+      font-weight: 400;
+      font-size: 1rem;
+      margin-top: 4px;
+      border-radius: 10px;
+      line-height: 1.5rem;
+      &:hover {
+        background: rgb(216, 211, 211);
+        cursor: pointer;
+      }
+    }
+    .date-time,
+    .email-phone {
+      gap: 30px;
+    }
+    .date-time {
+      margin-top: -20px;
+    }
+    label {
+      font-size: $small;
+      font-weight: 400;
+      font-family: "inter" sans-serif;
+      line-height: 2.125rem;
+      color: $dark-blue;
+    }
+  }
+  &-btn {
+    text-align: center;
+    padding: 24px auto;
+    img {
+      margin-left: 16px;
+    }
+  }
+}
+
+// mobile-app-section
+.mobile-app {
+  padding-top: 141px;
+
+  background-color: $baground;
+  &-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 78px;
+  }
+
+  &-large {
+    font-size: $large;
+    font-weight: 600;
+    color: $dark-blue;
+    line-height: 3.43rem;
+    margin-top: 16px;
+  }
+  &-medium {
+    font-size: $medium-3;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: $grey;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    max-width: 554px;
+  }
+  &-image-link {
+    gap: 24.26px;
+    margin-bottom: 143px;
+  }
+}
+// mobile app section end here
+
+// experts section start
+.experts {
+  position: relative;
+
+  &-info {
+    gap: 16px;
+    margin-top: 96px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-large {
+    font-size: $large;
+    font-weight: 600;
+    line-height: 2.83rem;
+    color: $dark-blue;
+  }
+  &-medium {
+    font-size: $medium-3;
+    color: $grey;
+    line-height: 2.5rem;
+    font-weight: 400;
+    max-width: 649px;
+    text-align: center;
+  }
+  &-image {
+    margin-top: 64px;
+    border-radius: 10px;
+    gap: 30px;
+    img {
+      width: 263px;
+    }
+    .name {
+      display: inline-block;
+      font-size: $medium;
+      color: $white;
+      font-weight: 400;
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .section {
+      display: inline-block;
+      font-size: $small;
+      font-weight: 400;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+    }
+    &::after {
+      content: "";
+      background: url(../img/Bg.png);
+      width: 1374px;
+      height: 440px;
+      transform: rotateX(10deg);
+      position: absolute;
+      z-index: -1;
+      background-repeat: no-repeat;
+      bottom: -70px;
+      left: -138px;
+    }
+  }
+  .btn {
+    text-align: center;
+    font-size: $small;
+    padding: 24px 40px;
+    font-weight: 600;
+    margin-bottom: 72px;
+  }
+}
+// feedbacks section
+.feedback {
+  padding: 96px 0px;
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &-text {
+    margin: auto;
+    &-large {
+      font-size: $large;
+      font-weight: 600;
+      color: $dark-blue;
+      margin-top: 16px;
+    }
+    &-medium-3 {
+      font-size: $medium-3;
+      font-weight: 400;
+      color: $grey;
+      line-height: 2.5rem;
+      margin: 16px 0 40px 0;
+    }
+    &-small {
+      font-size: $small;
+      font-weight: 400;
+      line-height: 2.125rem;
+      color: $grey;
+      margin: 24px 0;
+    }
+  }
+  &-name {
+    font-size: $medium-2;
+    font-weight: 700;
+    color: $dark-blue;
+    line-height: 2.1875rem;
+    margin-bottom: 2px;
+  }
+  &-ocu {
+    font-size: $small;
+    color: $grey;
+    line-height: 2.125rem;
+  }
+  &-btn {
+    text-align: center;
+  }
+}
+.blog {
+  position: relative;
+  padding: 96px 0 272px 0;
+  background: $baground;
+  &-title {
+    text-align: center;
+    &-large {
+      font-size: $large;
+      font-weight: 600px;
+      line-height: 3.82rem;
+      color: $dark-blue;
+      margin: 16px 0 56px 0;
+    }
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    &-card {
+      height: 430px;
+      width: 360px;
+      background: #ffff;
+      // padding: 24px;
+      border-radius: 20px;
+    }
+    &-text {
+      padding-left: 24px;
+    }
+  }
+  &-cata {
+    display: block;
+    font-size: $tiny;
+    font-weight: 600;
+    color: $blue;
+    margin: 30px 0 8px 0;
+  }
+  &-link {
+    font-size: $medium;
+    font-weight: 700;
+    color: $dark-blue;
+    line-height: 2.1875rem;
+    letter-spacing: 5%;
+    margin-bottom: 18px;
+  }
+  &-date {
+    font-size: $tiny;
+    font-weight: 600;
+    line-height: 16.9px;
+    margin-top: 16px;
+    color: $grey;
+  }
+}
+.assist-card {
+  position: absolute;
+  bottom: -218px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 90px;
+  width: 1150px;
+  background: $blue-gredient;
+  backdrop-filter: blur(80px);
+  padding: 64px 107px 64px 98px;
+  border-radius: 20px;
+  &-big {
+    font-size: $large;
+    color: $white;
+    font-weight: 600;
+    line-height: 3.5rem;
+    margin-bottom: 10px;
+  }
+  &-medium {
+    font-size: $medium-3;
+    font-weight: 400;
+    line-height: 2.82rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &::after {
+    content: "";
+    background: url(../img/assist.png);
+    background-repeat: no-repeat;
+    height: 236px;
+    width: 236px;
+    position: absolute;
+    top: 0;
+    right: -88px;
+  }
+  &::before {
+    content: "";
+    background: url(../img/Groupfooter.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 44px;
+    width: 64px;
+    bottom: 24px;
+    left: 24px;
+  }
+}
+.empty-div {
+  height: 294px;
+}
+footer {
+  background-color: $baground;
+}
+.footer-top {
+  height: 141px;
+  gap: 80px;
+  &-phone {
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    .link-text {
+      & > span {
+        font-size: $small;
+        font-weight: 400;
+        line-height: 2.125rem;
+        color: $dark-blue;
+        margin-bottom: 8px;
+
+        display: block;
+      }
+      & > a {
+        color: $yellow-orange;
+        font-size: $small;
+        font-weight: 500;
+        line-height: 2.125rem;
+      }
+    }
+  }
+}
+.footer-content {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  gap: 31px;
+}
+h4 {
+  display: inline-block;
+  position: relative;
+  font-size: $medium;
+  font-weight: 600;
+  color: $dark-blue;
+  line-height: 2.125rem;
+  margin-bottom: 30px;
+  &::after {
+    content: "";
+    height: 2px;
+    width: 50%;
+    background-color: $blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+.small-text {
+  font-size: $small;
+  font-weight: 400;
+  line-break: 2.125rem;
+  color: $grey;
+  margin-bottom: 32px;
+}
+.flex {
+  gap: 20px;
+
+  .fa {
+    padding: 10px;
+    font-size: 20px;
+    color: $dark-blue;
+  }
+}
+ul{
+  list-style: none;
+  li a{
+    text-decoration: none;
+    color: $grey;
+    line-height: 2.125rem;
+
+  }
+
+}
+.leatest-news .blog-date{
+  margin-top: 4px;
+  margin-bottom: 24px;
+  
+
+}
+.opening-hours{
+  .flex{
+    border-bottom: 1px solid  rgba(103, 106, 138, 0.15);
+    color: $grey;
+    font-size: $small;
+    line-height: 1.825rem;
   }
 }
