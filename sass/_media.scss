@@ -1,88 +1,489 @@
 @media screen and(min-width:1300px) {
-    .header-menu{
-        display:none;
-    }
-    
+  .header-menu {
+    display: none;
+  }
 }
 
 @media screen and(max-width:1300px) {
-    .header-menu{
-        display:none;
-    }
-    .container{
-        padding: 0 15px;
-
-    }
-    
-}
-
-
-// tablet screen 
-@media screen and (max-width:1022px) {
-    .top-nav{
-        display: none;
-    }
-    .header-links{
-        display: none;
-    }
-   .header-menu{
-        display: block;
-    }
-    .hero{
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        padding: 35px;
-        &-text{
-            text-align: center;
-            &-tiny{
-                margin: 0 auto;
-            }
-        }
-    }
-    .aboutus{
-        grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr;
-        align-items: center;
-        height: auto;
-    }
-    .circle-1{
-        display: none;
-    }
-    
-}
-@media screen and(max-width:700px) {
-    html{
-        font-size: 12px;
-    }
-    .hero{
-        padding: 0px;
-    }
-
-.cards{
-    display: grid;
-    height: auto;
-    text-align: start;
-    padding: 15px;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-.hero-image::before
-{
+  .header-menu {
     display: none;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
 }
-.header-flex{
-    height: auto;
+
+// tablet screen
+@media screen and (max-width: 1025px) {
+  html {
+    font-size: 15px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .top-nav-social {
+    transform: translateX(300%);
+    position: fixed;
+    left: 0;
+    z-index: 100;
+  }
+  .active.top-nav-social {
+    transform: translateX(0);
+    font-size: 20px;
+
+    :hover {
+      cursor: pointer;
+      color: $yellow-orange;
+    }
+  }
+  .header-menu {
+    display: block;
+  }
+  // content: responsive ---------------------------------------;
+  .hero {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    align-items: center;
+    &-text {
+      grid-column: span 12;
+    }
+    &-image {
+      grid-column: span 12;
+      order: 1;
+    }
+  }
+  // heor section end ----------------------
+
+  // responsive navbaaaaar design=-_
+  // __________________________________-------------
+  .header-menu {
+    right: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    z-index: 999;
+  }
+
+  .header-links {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    position: fixed;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    background: rgb(239, 236, 236);
+    z-index: 100;
+    flex-direction: column;
+
+    a {
+      color: black;
+    }
+  }
+
+  .header-links {
+    transform: translateX(100%);
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .active .header-links {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.6s ease-in-out;
+  }
+
+  .header-social-right {
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .active .topnav .header-social-right {
+    transform: translateX(0);
+    transition: 0.3s ease-in;
+  }
+
+  .assist-card {
+    position: relative;
+    bottom: 0;
+    padding: 15px;
+  }
+  .active .header-menu span {
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      transform-origin: 0.3s ease-in-out;
+    }
+    &:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      transform-origin: all 0.3s ease-in-out;
+    }
+  }
+
+  // -------------------------------------
+  // ______________________________________________
 }
-.flex{
-    flex-wrap: wrap;
+
+@media (max-width: 968px) {
+  .container{
+    // overflow-x: hidden;
+
+  }
+  body {
+    font-size: 14px;
+  }
+  section {
+    padding: 30px 0;
+  }
+  .aboutus {
+    padding-top: 0;
+    margin-top: 0;
+
+    &-image {
+      grid-column: span 12;
+    }
+    margin: auto;
+
+    &-text {
+      grid-column: span 12;
+      text-align: start;
+    }
+  }
+
+  // our-services
+  .our-services {
+    &-title {
+      grid-column: span 12;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    span,
+    p,
+    h3 {
+      text-align: start;
+    }
+
+    .card {
+      grid-column: span 6;
+    }
+  }
+  .cards-card {
+    grid-column: span 6;
+  }
+  .cards {
     justify-content: center;
+    display: none;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+
+    .card-3 {
+      grid-column: span 12;
+    }
+  }
+
+  // appointmnets
+  .appointments {
+    &-card {
+      grid-gap: 30px;
+    }
+    &-text {
+      grid-gap: 0;
+      grid-column: span 12;
+      .left {
+        grid-column: span 12;
+        margin: 0;
+      }
+      .right {
+        margin: 0;
+        grid-column: span 12;
+      }
+    }
+    &-image {
+      grid-column: span 6;
+    }
+  }
+
+  // booking section
+  .booking {
+    grid-gap: 30px;
+    align-items: center;
+    &-left {
+      // gap: 20px;
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      // align-content: center;
+      justify-content: center;
+      align-items: center;
+      span {
+        grid-column: 6 / span 8;
+        justify-self: start;
+        grid-row: 1/2;
+      }
+      h2 {
+        grid-column: 6 / span 8;
+        grid-row: 2/3;
+        margin-top: 0;
+      }
+      p {
+        grid-column: span 12;
+        grid-row: 3/4;
+      }
+      img {
+        justify-self: start;
+        grid-column: 1/5;
+        grid-row: 1/3;
+      }
+    }
+    .form {
+      grid-column: span 12;
+      padding: 30px 80px;
+    }
+  }
+  .blog{
+    padding-bottom: 40px;
+  }
+.assist-card{
+  display: block;
 }
+.empty-div{
+  display: none;
+}
+  // mobile section /////////////
+  .mobile-app {
+    &-text {
+      grid-column: span 12;
+      column-gap: 20px;
+      grid-row: 1/5;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      justify-content: start;
+      span,
+      h2 {
+        grid-column: span 12;
+        justify-self: start;
+      }
+    }
+    .mobile-app-medium {
+      grid-column: 1/8;
+      grid-row: 3/4;
+      width: auto;
+    }
+    &-image-link {
+      grid-column: span 12;
+      align-self: center;
+      justify-self: center;
+      grid-row: 4/5;
+    }
+    .image-link {
+      grid-row: 3/4;
+    }
+  }
+   .feedback-content{
+     display: flex;
+    flex:1;
+     padding: 0 40px;
+     img{
+      max-width: 100%;
+      object-fit: contain;
+     }
+   }
 }
 
+@media screen and(max-width:769px) {
+  section {
+    padding: 40px 0;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .cards-card {
+    grid-column: span 12;
+  }
+  .cards .card-3 {
+    grid-column: span 12;
+    &::after {
+      display: none;
+    }
+  }
 
-    
+  // hero section
+  .hero {
+    flex-direction: column;
+    &image {
+      order: 1;
+    }
+    &-text {
+      order: 2;
+    }
+  }
+
+  // about us------------------
+
+  .aboutus {
+    &-image {
+      grid-column: span 12;
+      margin: auto;
+    }
+    &-text {
+      grid-column: span 12;
+    }
+  }
+  // our services section
+  .our-services {
+    display: block;
+    &-title {
+      align-items: flex-start;
+    }
+    &-medium-3 {
+      text-align: start;
+    }
+    grid-column-gap: 0px;
+    .card {
+      grid-column: span 12;
+    }
+    .btn {
+      margin: 0;
+    }
+  }
+
+  // appointment section
+
+  .appointments-text {
+    grid-gap: 10px;
+    .left,
+    .right {
+      grid-column: span 12;
+    }
+  }
+  .appointments-card .appointments-image {
+    grid-column: span 12;
+    &-3::after {
+      display: none;
+    }
+  }
+  .appointments-card .Appoinments-image3::after {
+    background: url(../img/dots.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 20px;
+    position: absolute;
+    right: -114px;
+    bottom: -73px;
+    z-index: -1;
+  }
+
+  // booking section
+  .booking {
+    grid-column: span 12;
+  }
+
+  form {
+    .date-time,
+    .email-phone {
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+  }
+
+  // .mobile-app
+
+  .mobile-app {
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+
+      .image-link {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        max-width: 70%;
+      }
+    }
+    .mobile-app-medium {
+      grid-column: 1/13;
+      grid-row: 3/4;
+      max-width: 100vw;
+    }
+  }
+ .experts-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    .sm-btn,.experts-large,.experts-medium{
+      line-height: 1.4em;
+      text-align: start;
+    }
+  }
+  .blog {
+    &-content {
+      display: block;
+    }
+  }
+  //   assist card section
+  .assist-card {
+    margin-top: 30px;
+
+    &::after,
+    &::before {
+      z-index: -2;
+    }
+  }
+
+  assist-card-m {
+    display: grid;
+    display: none;
+    position: relative;
+    grid-template-columns: auto;
+    width: 100%;
+    padding: 12px;
+  }
+  .feedback-content{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .footer {
+    margin-top: 30px;
+    &-top {
+      height: auto;
+    }
+
+    &-content {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 20px;
+    }
+    .copyright {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .booking-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .booking .form {
+    padding: 20px;
+  }
+}
